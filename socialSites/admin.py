@@ -1,3 +1,3 @@
 from django.contrib import admin
-
-# Register your models here.
+from .models import socialmedia_menu
+admin.site.register(socialmedia_menu)

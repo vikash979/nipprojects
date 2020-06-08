@@ -1,0 +1,70 @@
+{% load static %}
+<div class="heading-slider">
+	<div class="header-bottom">
+	                  <div class="row">
+	                     <div class="col-md-12">
+
+	                        <div class="full">
+	                           <div class="main-menu-section">
+	                              <div class="menu">
+	                                 <nav class="navbar navbar-inverse">
+	                                    <div class="navbar-header">
+	                                       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+	                                       <span class="sr-only">Toggle navigation</span>
+	                                       <span class="icon-bar"></span>
+	                                       <span class="icon-bar"></span>
+	                                       <span class="icon-bar"></span>
+	                                       </button>
+	                                       <a class="navbar-brand" href="#">Menu</a>
+	                                    </div>
+	                                    <div class="collapse navbar-collapse js-navbar-collapse" style="">
+	                                       <ul class="nav navbar-nav">
+	                                          <li class="{% if request.resolver_match.url_name == 'applicationheasing' %}active{% endif %}" ><a href="index.html">Home</a>
+
+    
+	                                          </li>
+
+	                                          <li class="dropdown mega-dropdown">
+	                                             <a href="match" class="dropdown-toggle" data-toggle="dropdown">Application<span class="caret"></span></a>
+	                                             <ul class="dropdown-menu mega-dropdown-menu" id="menu_bar"> 
+	                                             </ul>
+	                                          </li>
+
+	                                          <li class="dropdown mega-dropdown {% if request.resolver_match.url_name == 'ackpolicy' %}active{% endif %}"><a href="/acknowledge/ack_menudetail/" class="dropdown-toggle" data-toggle="dropdown">KM<span class="caret"></span></a>
+	                                          	<ul class="dropdown-menu mega-dropdown-menu" id="ack_bar">
+	                                          	</ul>
+
+	                                          </li>
+	                                          <li class="dropdown mega-dropdown"><a href="match" class="dropdown-toggle" data-toggle="dropdown">Social Sites<span class="caret"></span></a>
+	                                          	<ul class="dropdown-menu mega-dropdown-menu" id="socialmenu_bar">
+	                                          	</ul>
+	                                          </li>
+	                                          <li class="dropdown mega-dropdown"><a href="match" class="dropdown-toggle" data-toggle="dropdown">Other Sites<span class="caret"></span></a>
+	                                          	<ul class="dropdown-menu mega-dropdown-menu" id="othersiters_bar"> 
+	                                             </ul>
+	                                          </li>
+	                                          <li><a href="contact.html">Services</a></li>
+	                                          
+	                                          <li><a href="contact.html">Information</a></li>
+	                                          <li><a href="contact.html">Help</a></li>
+	                                       </ul>
+	                                    </div>
+	                                    <!-- /.nav-collapse -->
+	                                 </nav>
+	                                 <div class="search-bar">
+	                                    <div id="imaginary_container">
+	                                       <div class="input-group stylish-input-group">
+	                                          <input type="text" class="form-control"  placeholder="Search" >
+	                                          <span class="input-group-addon">
+	                                          <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+	                                          </span>
+	                                       </div>
+	                                    </div>
+	                                 </div>
+	                              </div>
+	                           </div>
+	                        </div>
+	                     </div>
+	                  </div>
+	 </div>
+ </div>
