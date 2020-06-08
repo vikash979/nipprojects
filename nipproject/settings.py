@@ -25,7 +25,10 @@ SECRET_KEY = '__ffr7bgg-8#=*j*nius4mqb+bmcmn*bin)4vy6b8m*-thnlpa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.8','localhost']
+
+#AUTH_USER_MODEL = "users.CustomUser"
+AUTH_USER_MODEL = "users.User"
 
 
 # Application definition
@@ -38,6 +41,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+LOCAL_APPS = [
+            'application',
+            'users',
+            'acknowledge',
+            'blogs',
+            'rest_framework',
+            'socialSites',
+            'othersites',
+            'rest_framework.authtoken',
+
+            ]
+
+INSTALLED_APPS += LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,7 +71,7 @@ ROOT_URLCONF = 'nipproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+         'DIRS': ['templates','media'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +85,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'nipproject.wsgi.application'
+DATE_INPUT_FORMATS = ("%d-%m-%Y"),
 
 
 # Database
@@ -98,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+PAGINATION_SIZE = 10
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -118,3 +136,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATIC_URL = '/static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = ""
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+#######    Media  ########
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
